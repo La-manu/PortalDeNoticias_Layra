@@ -1,0 +1,368 @@
+<!-- Documento HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Para o site ser responsivo em celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prisma Notícia</title>
+
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header>
+
+        <!-- Parte superior do header (logo + menu + pesquisa) -->
+        <div class="cima">
+
+            <!-- LOGO + ÍCONE DO MENU LATERAL -->
+            <div class="logo">
+                <button id="btnMenu" aria-label="Abrir menu" style="background:none;border:none;padding:0">
+                    <!-- Use sua imagem em img/menu.png se quiser; aqui tem fallback com texto -->
+                    <img class="menu" src="img/menu.png" alt="menu" onerror="this.style.display='none';this.insertAdjacentText('afterend','☰ Menu')">
+                </button>
+
+                    <!-- NAV: a sidebar (já inserida no local correto) -->
+                    <nav id="sidebar" class="sidebar" aria-hidden="true">
+                    <!-- botão fechar com id btnFechar -->
+                    <button id="btnFechar" class="fechar" aria-label="Fechar menu">×</button>
+                    <a href="index.html">Início</a>
+                    <a href="noticia.html">Notícias</a>
+                    <a href="entretenimento.html">Entretenimento</a>
+                    <a href="contato.html">Contato</a>
+                    </nav>
+
+                <img src="/img/logo.png" alt="" class="log">  <!-- Logo do site -->
+            </div>
+
+            <!-- ÁREA DA PESQUISA -->
+            <div class="pesquisa">
+                <div class="search-wrapper">
+
+                    <!-- Campo de busca completo -->
+                    <label class="search" aria-label="Campo de busca">
+
+                        <!-- Campo de texto onde o usuário digita -->
+                        <input type="search" placeholder="Busque" class="search-input" />
+
+                        <!-- Botão com ícone de lupa -->
+                        <button class="search-btn" aria-label="Pesquisar">
+                            🔍︎​
+                        </button>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU PRINCIPAL DE NAVEGAÇÃO -->
+        <div class="opcoes">
+            <a href="noticia.html">Notícias</a>
+            <a href="#Ultimas">Ultímas</a>
+            <a href="entretenimento.html">Entretenimento</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- Título com imagem -->
+    <div class="box">
+        <img src="/img/Escrita.png" alt="">
+        <h3>Ultímas Notícias</h3>
+    </div>
+
+
+    <!-- ===================== CARROSSEL DE NOTÍCIAS ===================== -->
+    <section class="carousel-container">
+
+        <!-- Faixa deslizante do carrossel -->
+        <div class="carousel-track">
+
+            <!-- Cada card representa uma notícia -->
+            <div class="card" onclick="openModal('modal-harrypotter')">
+                <h3>Enem 2025: Inep divulga gabarito oficial e cadernos de questões do segundo dia de provas</h3>
+                <h2>Educação</h2>
+                <h4>date: 19 de Novembro de 2025 </h4>
+                <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/11/16/675x450/1_enem-4-60987145.jpg?20251116200659?20251116200659" alt="">
+                <p></p>
+            </div>
+             
+            <div class="card">
+                <h3>Incêndios florestais em unidades de conservação chegam ao menor patamar desde 2018</h3>
+                <h2>Planeta</h2>
+                <h4>date: 18 de Novembro de 2025</h4>
+                <img src="https://www.gov.br/icmbio/pt-br/assuntos/noticias/ultimas-noticias/incendios-florestais-em-unidades-de-conservacao-chegam-ao-menor-patamar-desde-2018/siteoperacao-incendio-10-09-24-foto-vitorsaraiva-1776.png/@@images/50ce804b-e6a7-4587-b7a7-b1b04343d8fd.png" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Daniel Radcliffe mandou carta para novo intérprete de "Harry Potter"</h3>
+                <h2>Mundo</h2>
+                <h4> date: 19 de Novembro de 2025 </h4>
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/novo-harry-potter-serie.png?w=1200&h=900&crop=0" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Batalhão da PM entra no radar para prisão de Bolsonaro</h3>
+                <h2>Política</h2>
+                <h4> date: 19 de Novembro 2025</h4>
+                <img src="/img/EDUTECH.png" alt="EduTech em Alta">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Stranger Things | Criadores confirmam duração do último episódio</h3>
+                <h2>Mundo</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://cdn.ome.lt/6oxZwfA-MY4SaKphf_PyD2xzc-I=/987x0/smart/filters:format(webp)/uploads/conteudo/fotos/stranger-things-netflix-teaser-ultima-temporada.jpg" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Quem é Chico Moedas, ex de Luísa Sonza que pode entrar para a política</h3>
+                <h2>Famosos</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://www.maisnovela.com.br/wp-content/uploads/2023/12/Luisa-Sonza-e-Chico-Moedas.png" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>EUA rejeitaram oferta de renúncia de Nicolás Maduro em negociação, diz NYT</h3>
+                <h2>Política</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/01/2025-01-12T181627Z_1_LYNXMPEL0B08P_RTROPTP_4_VENEZUELA-CONDENA-SANCOES-e1737580654733.jpg?w=1200&h=900&crop=0" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Lula vota a Belém para pressionar por resultado concreto da COP30</h3>
+                <h2>Política</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://conteudo.imguol.com.br/c/noticias/b6/2025/11/18/071125---o-presidente-lula-pt-durante-discurso-na-plenaria-de-abertura-da-cop30-em-belem-1763484201117_v2_900x506.jpg.webp" alt="">
+                <p></p>
+            </div>
+
+
+
+            <!-- ===================== AQUI OS CARDS TA DUPLICADO PRA O CARROSEL CONSEGUIR SE MOVER NATURALMENTE E LISO ===================== -->
+
+             <div class="card" onclick="openModal('modal-harrypotter')">
+                <h3>Enem 2025: Inep divulga gabarito oficial e cadernos de questões do segundo dia de provas</h3>
+                <h2>Educação</h2>
+                <h4>date: 19 de Novembro de 2025 </h4>
+                <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/11/16/675x450/1_enem-4-60987145.jpg?20251116200659?20251116200659" alt="">
+                <p></p>
+            </div>
+             
+            <div class="card">
+                <h3>Incêndios florestais em unidades de conservação diminui desde 2018</h3>
+                <h2>Planeta</h2>
+                <h4>date: 18 de Novembro de 2025</h4>
+                <img src="https://www.gov.br/icmbio/pt-br/assuntos/noticias/ultimas-noticias/incendios-florestais-em-unidades-de-conservacao-chegam-ao-menor-patamar-desde-2018/siteoperacao-incendio-10-09-24-foto-vitorsaraiva-1776.png/@@images/50ce804b-e6a7-4587-b7a7-b1b04343d8fd.png" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Daniel Radcliffe mandou carta para novo intérprete de "Harry Potter"</h3>
+                <h2>Mundo</h2>
+                <h4> date: 19 de Novembro de 2025 </h4>
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/novo-harry-potter-serie.png?w=1200&h=900&crop=0" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Batalhão da PM entra no radar para prisão de Bolsonaro</h3>
+                <h2>Política</h2>
+                <h4> date: 21 de Dezembro 2024</h4>
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/09/AGE20250911070-e1763568757637.jpg?w=1200&h=900&crop=0" alt="EduTech em Alta">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Stranger Things | Criadores confirmam duração do último episódio</h3>
+                <h2>Mundo</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://cdn.ome.lt/6oxZwfA-MY4SaKphf_PyD2xzc-I=/987x0/smart/filters:format(webp)/uploads/conteudo/fotos/stranger-things-netflix-teaser-ultima-temporada.jpg" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Quem é o Chico Moedas, ex de Luísa Sonza que pode entrar para a política</h3>
+                <h2>Famosos</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://www.maisnovela.com.br/wp-content/uploads/2023/12/Luisa-Sonza-e-Chico-Moedas.png" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>EUA rejeitaram oferta de renúncia de Nicolás Maduro em negociação, diz NYT</h3>
+                <h2>Política</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/01/2025-01-12T181627Z_1_LYNXMPEL0B08P_RTROPTP_4_VENEZUELA-CONDENA-SANCOES-e1737580654733.jpg?w=1200&h=900&crop=0" alt="">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3>Lula vota a Belém para pressionar por resultado concreto da COP30</h3>
+                <h2>Política</h2>
+                <h4> date: 19 de Novembro de 2025</h4>
+                <img src="https://conteudo.imguol.com.br/c/noticias/b6/2025/11/18/071125---o-presidente-lula-pt-durante-discurso-na-plenaria-de-abertura-da-cop30-em-belem-1763484201117_v2_900x506.jpg.webp" alt="">
+                <p></p>
+            </div>
+
+        </div>
+    </section>
+<!-- ===================== UMA PEQUENA SEÇÃO COM 3 ULTIMAS NOTICIAS ===================== -->
+    <section class="ultimas">
+        
+        <div class="quadrado">
+            <div class="box1">
+                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/Selecao-Brasileira-e1763230411572.jpg?w=1200&h=900&crop=0" alt="">
+                <h1>Brasil na lista? Veja as seleções cabeça de chave na Copa do Mundo</h1>
+                <h2>Cabeças de chave do próximo Mundial foram definidos de acordo com o ranking da Fifa</h2>
+            </div>
+
+            <div class="quadradinho">
+                <div class="box2">
+                    <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2025/11/Enem-2025-tera-3-questoes-anuladas-veja-quais-sao-1-1024x683.jpg" alt="">
+                    
+                    <div class="text">
+                        <h1>Enem 2025 terá 3 questões anuladas; veja quais são</h1>
+                        <h2>questões anuladas após vazamento; veja detalhes e as questões afetadas.</h2>
+                    </div>
+                </div>
+                <div class="box2">
+                     <img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/0ba7/live/4671e100-c153-11f0-ae46-bd64331f0fd4.jpg.webp" alt="">
+                    <div class="text">
+                        <h1>O que é o cometa 3I/Atlas? naves alienígenas?</h1>
+                        <h2>Cometa com comportamento incomum avistado no sistema solar</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+   <!-- ===================== CÓDIGO DE TODAS AS MODAL DESSA PAGINA (COLOQUEI AQUI PQ TA MAIS FACIL P ORGANIZAR) ===================== -->
+   <!-- ===================== MODAL 1 (VAI TER MUITAS, SE PREPARA) ===================== -->
+   <div id="modal-harrypotter" class="modal">
+                <div class="modal-content">
+                        <span onclick="closeModal('modal-harrypotter')" class="close">X</span>
+                        <div class="cabecalho">
+                            <h1>Enem 2025: Inep divulga gabarito oficial e cadernos de questões do segundo dia de provas</h1>
+                            <h2>Respostas das provas de Matemática e Ciências da Natureza serão usadas apenas para fins pedagógicos; resultado final do exame será divulgado em janeiro</h2>
+                            <h3>postado em 19/11/2025 11:42</h3>
+                        </div>
+                        <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/11/16/675x450/1_enem-4-60987145.jpg?20251116200659?20251116200659" alt="" class="img-noticia">
+                        <p class="descricao-foto">Caderno de provas do segundo dia do Enem 2025 - (crédito: Angelo Miguel/MEC)</p>
+                        <div class="conteudo">
+                            <p>O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) divulgou, nesta quarta-feira (19/11), o <span class="destaque">gabarito oficial e os cadernos de questões do segundo dia de provas do Exame Nacional do Ensino Médio (Enem 2025)</span>. Nesta etapa, os participantes responderam às questões de Matemática e Ciências da Natureza, disciplinas que costumam apresentar maior nível de dificuldade e exigem interpretação precisa, domínio de fórmulas e habilidade de resolução rápida.</p>
+                            <p>O documento com as respostas oficiais foi publicado no portal do Inep e pode ser consultado pela página do candidato. O gabarito serve para que os estudantes comparem seus desempenhos, mas não permite o cálculo exato das notas, já que o Enem utiliza a metodologia da Teoria de Resposta ao Item (TRI), que considera parâmetros como dificuldade, coerência das respostas e padrão individual de acertos e erros.</p>
+                            <p>Em 2025, o segundo dia de aplicação ocorreu de forma tranquila, com poucas ocorrências, conforme o Inep. No país, o exame mobilizou mais de 4,8 milhões de candidatos. O Ministério da Educação (MEC) estima uma taxa de participação de cerca de 70% nos dois dias de prova, índice considerado uma média últimos anos.</p>
+                            <p>O resultado final do Enem 2025 será divulgado em janeiro de 2026, e poderá ser usado para ingresso em universidades públicas por meio do Sistema de Seleção Unificada (Sisu), para obtenção de bolsas no Programa Universidade para Todos (Prouni) e para acesso a financiamentos estudantis, como o Fies.</p>
+                        </div>
+                        <hr>
+                       <div class="saiba-mais">
+                            <h2>SAIBA MAIS</h2>
+
+                            <div class="grid">
+
+                                <a href="index.html?modal=harrypotter" class="card3">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/novo-harry-potter-serie.png?w=1200&h=900&crop=0" alt="">
+                                    <div class="info">
+                                        <span class="tag">Daniel Radcliffe mandou carta para novo intérprete de "Harry Potter"</span>
+                                        <p>O ator Daniel Radcliffe, 36, conhecido por seu papel em "Harry Potter", contou que, com a nova produção baseada nos livros de J. K. Rowling, enviou uma carta ao novo protagonista, Dominic McLaughlin, 11, lhe desejando um ótimo período com o personagem.</p>
+                                    </div>
+                                 </a>
+
+                                <a href="index.html?modal=bolsonaro" class="card3">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/09/AGE20250911070-e1763568757637.jpg?w=1200&h=900&crop=0" alt="EduTech em Alta">
+                                    <div class="info">
+                                        <span class="tag">Batalhão da PM entra no radar para prisão de Bolsonaro</span>
+                                        <p>Batalhão da PMDF passou a ser considerado como opção para a prisão do ex-presidente Jair Bolsonaro (PL), condenado a 27 anos e três meses de reclusão no julgamento do plano de golpe. O local fica na região administrativa do Guará, a cerca de 15 quilômetros do centro de Brasília.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=strangerthings" class="card3">
+                                    <img src="https://cdn.ome.lt/6oxZwfA-MY4SaKphf_PyD2xzc-I=/987x0/smart/filters:format(webp)/uploads/conteudo/fotos/stranger-things-netflix-teaser-ultima-temporada.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Stranger Things | Criadores confirmam duração do último episódio</span>
+                                        <p>Os irmãos Ross e Matt Duffer, criadores da série "Stranger Things", confirmaram a duração do último episódio da produção. Cerca de uma semana antes da primeira parte da última temporada ser lançada, eles falaram sobre o assunto em entrevista ao Collider.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=lula" class="card3">
+                                <img src="https://conteudo.imguol.com.br/c/noticias/b6/2025/11/18/071125---o-presidente-lula-pt-durante-discurso-na-plenaria-de-abertura-da-cop30-em-belem-1763484201117_v2_900x506.jpg.webp" alt="">
+                                <div class="info">
+                                    <span class="tag">Lula vota a Belém para pressionar por resultado concreto da COP30</span>
+                                    <p>O presidente Lula (PT) volta hoje a Belém para pressionar por um resultado concreto para a COP30, cúpula internacional do clima. O presidente vai se reunir com o secretário-geral da ONU, António Guterres, em um encontro que visa "fortalecer a governança climática e o multilateralismo"</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=copa" class="card3">
+                                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/Selecao-Brasileira-e1763230411572.jpg?w=1200&h=900&crop=0" alt="">
+            
+                                <div class="info">
+                                    <span class="tag">Brasil na lista? Veja as seleções cabeça de chave na Copa do Mundo</span>
+                                    <p>A Seleção Brasileira será cabeça de chave na Copa do Mundo de 2026. Isso ficou definido após anúncio da Fifa nesta quinta-feira (19) e atualização dom ranking das seleções.</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=enem" class="card3">
+                                    <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2025/11/Enem-2025-tera-3-questoes-anuladas-veja-quais-sao-1-1024x683.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Enem 2025 terá 3 questões anuladas; veja quais são</span>
+                                        <p>O Exame Nacional do Ensino Médio (Enem) 2025 está sendo marcado por uma polêmica envolvendo o vazamento de questões antes da aplicação da prova.Devido à situação, na tarde desta terça (18), o Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) anunciou a anulação de três questões aplicadas durante a primeira fase do exame.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+    <!-- ===================== MODAL 2 ===================== -->
+
+<!-- ===================== CÓDIGO DO FOOTERRRRR===================== -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+            <h2 class="footer-title">Prisma Notícia</h2>
+            <p class="footer-text">
+                Seu portal que enxerga tudo de vários ângulos — rápido, direto e sem enrolação.
+            </p>
+            </div>
+
+
+
+            <div class="footer-section">
+            <h3 class="footer-subtitle">Redes sociais</h3>
+            <p class="footer-text">Fica de olho nas novidades:</p>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Prisma Notícia — Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+ <!-- ===================== LINKAR JS===================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

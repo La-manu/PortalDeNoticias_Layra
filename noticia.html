@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsividade para celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
+    <title>Prisma Notícia</title>
+
+    <!-- CSS externo específico dessa página -->
+    <link rel="stylesheet" href="css/noticias.css">
+</head>
+<body>
+
+    <!-- ======================= CABEÇALHO ======================= -->
+    <header>
+
+        <!-- Parte superior: logo + menu + barra de busca -->
+        <div class="cima">
+
+            <!-- LOGO + ÍCONE DO MENU -->
+            <div class="logo">
+                <button id="btnMenu" aria-label="Abrir menu" style="background:none;border:none;padding:0">
+                    <!-- Use sua imagem em img/menu.png se quiser; aqui tem fallback com texto -->
+                    <img class="menu" src="img/menu.png" alt="menu" onerror="this.style.display='none';this.insertAdjacentText('afterend','☰ Menu')">
+                </button>
+
+                    <!-- NAV: a sidebar (já inserida no local correto) -->
+                    <nav id="sidebar" class="sidebar" aria-hidden="true">
+                    <!-- botão fechar com id btnFechar -->
+                    <button id="btnFechar" class="fechar" aria-label="Fechar menu">×</button>
+                    <a href="index.html">Início</a>
+                    <a href="noticia.html">Notícias</a>
+                    <a href="entretenimento.html">Entretenimento</a>
+                    <a href="contato.html">Contato</a>
+                    </nav>
+
+                <img src="/img/logo.png" alt="" class="log">   <!-- Logo principal -->
+            </div>
+
+            <!-- CAMPO DE PESQUISA -->
+            <div class="pesquisa">
+                <div class="search-wrapper">
+
+                    <!-- Label envolve o input e o botão -->
+                    <label class="search" aria-label="Campo de busca">
+
+                        <!-- Campo de texto onde o usuário digita -->
+                        <input type="search" placeholder="Busque" class="search-input" />
+
+                        <!-- Botão com ícone de lupa -->
+                        <button class="search-btn" aria-label="Pesquisar">
+                            🔍︎​
+                        </button>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU PRINCIPAL DO SITE -->
+        <div class="opcoes">
+            <a href="noticia.html">Notícias</a>
+            <a href="index.html">Ultímas</a>
+            <a href="entretenimento.html">Entretenimento</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- IMAGEM DO TÍTULO DA PÁGINA -->
+    <img src="img/Escrita.png" alt="" class="entretenimento">
+
+    <!-- ======================= SEÇÃO DAS NOTÍCIAS ======================= -->
+    <section>
+
+        <div class="insights">
+        <!-- Grade com todos os cards -->
+            <div class="grade">
+
+    <!-- ===================== CADA CARD2 É UMA NOTICIA *JA ESTÃO JUNTAS COM O CÓDIGO DA MODAL DELAS, POISNESSA PAGINA ACHEI MAIS ORGANIZADO ASSIM ===================== -->
+                <div class="card2">
+                    <h3>A atitude inusitada de Suzane na faculdade que ficou de fora de “Tremembé”</h3>
+                    <h2>Entretenimento</h2>
+                    <h4>date: 19 de Novembro de 2025</h4>
+                    <img src="https://www.bnewssaopaulo.com.br/media/_versions/2025/11/suzane-von-richthofen-faculdade-1_widelg.jpg" alt="">
+                    <p></p>
+                </div>
+
+                <div class="card2">
+                    <h3>Sandrão processa Prime Video após repercussão da série Tremembé; veja quanto ela pediu</h3>
+                    <h2>Entretenimento</h2>
+                    <h4>date: 19 de Novembro de 2025</h4>
+                    <img src="https://www.bnewssaopaulo.com.br/media/_versions/2025/11/sandrao_fzcbr4il_widelg.jpg" alt="">
+                    <p></p>
+                </div>
+
+                <div class="card2">
+                    <h3>Rock in Rio 2026 anuncia venda do RIR Card com ingressos limitados; saiba como conseguir</h3>
+                    <h2>pop</h2>
+                    <h4>date: 19 de Novembro de 2025</h4>
+                    <img src="https://www.bnewssaopaulo.com.br/media/_versions/2025/05/rock-in-rio_widelg.jpg" alt="">
+                    <p></p>
+                </div>
+
+                <div class="card2">
+                    <h3>Andressa Urach vira piada nas redes após “samba culposo” em escola de samba; veja vídeo</h3>
+                    <h2>Famosos</h2>
+                    <h4>date: 17 de Novembro de 2025</h4>
+                    <img src="https://www.bnews.com.br/media/_versions/2025/11/andressa-urach_6c6pbbt2_widelg.jpg" alt="">
+                    <p></p>
+                </div>
+
+                <div class="card2">
+                    <h3>Bicheiro que inspirou personagem da Netflix irá a júri popular por homicídio; veja o caso</h3>
+                    <h2>Artigos</h2>
+                    <h4>date: 18 de Novembro de 2025</h4>
+                    <img src="https://www.bnewssaopaulo.com.br/media/_versions/2025/11/jogo-do-bicho_widelg.png" alt="">
+                    <p></p>
+                </div>
+
+
+                <div class="card2" onclick="openModal('modal-enem')">
+                     <h3>Enem 2025: Inep divulga gabarito oficial e cadernos de questões do segundo dia</h3>
+                    <h2>Educação</h2>
+                    <h4>date: 19 de Novembro de 2025 </h4>
+                    <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/11/16/675x450/1_enem-4-60987145.jpg?20251116200659?20251116200659" alt="">
+                    <p></p>
+                </div>
+                <div id="modal-enem" class="modal">
+                <!-- ===================== MODAL DA NOTICIA===================== -->
+                <div class="modal-content">
+                        <span onclick="closeModal('modal-enem')" class="close">X</span>
+                        <div class="cabecalho">
+                            <h1>Enem 2025: Inep divulga gabarito oficial e cadernos de questões do segundo dia de provas</h1>
+                            <h2>Respostas das provas de Matemática e Ciências da Natureza serão usadas apenas para fins pedagógicos; resultado final do exame será divulgado em janeiro</h2>
+                            <h3>postado em 19/11/2025 11:42</h3>
+                        </div>
+                        <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/11/16/675x450/1_enem-4-60987145.jpg?20251116200659?20251116200659" alt="" class="img-noticia">
+                        <p class="descricao-foto">Caderno de provas do segundo dia do Enem 2025 - (crédito: Angelo Miguel/MEC)</p>
+                        <div class="conteudo">
+                            <p>O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) divulgou, nesta quarta-feira (19/11), o <span class="destaque">gabarito oficial e os cadernos de questões do segundo dia de provas do Exame Nacional do Ensino Médio (Enem 2025)</span>. Nesta etapa, os participantes responderam às questões de Matemática e Ciências da Natureza, disciplinas que costumam apresentar maior nível de dificuldade e exigem interpretação precisa, domínio de fórmulas e habilidade de resolução rápida.</p>
+                            <p>O documento com as respostas oficiais foi publicado no portal do Inep e pode ser consultado pela página do candidato. O gabarito serve para que os estudantes comparem seus desempenhos, mas não permite o cálculo exato das notas, já que o Enem utiliza a metodologia da Teoria de Resposta ao Item (TRI), que considera parâmetros como dificuldade, coerência das respostas e padrão individual de acertos e erros.</p>
+                            <p>Em 2025, o segundo dia de aplicação ocorreu de forma tranquila, com poucas ocorrências, conforme o Inep. No país, o exame mobilizou mais de 4,8 milhões de candidatos. O Ministério da Educação (MEC) estima uma taxa de participação de cerca de 70% nos dois dias de prova, índice considerado uma média últimos anos.</p>
+                            <p>O resultado final do Enem 2025 será divulgado em janeiro de 2026, e poderá ser usado para ingresso em universidades públicas por meio do Sistema de Seleção Unificada (Sisu), para obtenção de bolsas no Programa Universidade para Todos (Prouni) e para acesso a financiamentos estudantis, como o Fies.</p>
+                        </div>
+                        <hr>
+                       <div class="saiba-mais">
+                            <h2>SAIBA MAIS</h2>
+
+                            <div class="grid">
+
+                                <a href="index.html?modal=modal-harrypotter" class="card">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/novo-harry-potter-serie.png?w=1200&h=900&crop=0" alt="">
+                                    <div class="info">
+                                        <span class="tag">Daniel Radcliffe mandou carta para novo intérprete de "Harry Potter"</span>
+                                        <p>O ator Daniel Radcliffe, 36, conhecido por seu papel em "Harry Potter", contou que, com a nova produção baseada nos livros de J. K. Rowling, enviou uma carta ao novo protagonista, Dominic McLaughlin, 11, lhe desejando um ótimo período com o personagem.</p>
+                                    </div>
+                                 </a>
+
+                                <a href="index.html?modal=bolsonaro" class="card">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/09/AGE20250911070-e1763568757637.jpg?w=1200&h=900&crop=0" alt="EduTech em Alta">
+                                    <div class="info">
+                                        <span class="tag">Batalhão da PM entra no radar para prisão de Bolsonaro</span>
+                                        <p>Batalhão da PMDF passou a ser considerado como opção para a prisão do ex-presidente Jair Bolsonaro (PL), condenado a 27 anos e três meses de reclusão no julgamento do plano de golpe. O local fica na região administrativa do Guará, a cerca de 15 quilômetros do centro de Brasília.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=strangerthings" class="card">
+                                    <img src="https://cdn.ome.lt/6oxZwfA-MY4SaKphf_PyD2xzc-I=/987x0/smart/filters:format(webp)/uploads/conteudo/fotos/stranger-things-netflix-teaser-ultima-temporada.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Stranger Things | Criadores confirmam duração do último episódio</span>
+                                        <p>Os irmãos Ross e Matt Duffer, criadores da série "Stranger Things", confirmaram a duração do último episódio da produção. Cerca de uma semana antes da primeira parte da última temporada ser lançada, eles falaram sobre o assunto em entrevista ao Collider.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=lula" class="card">
+                                <img src="https://conteudo.imguol.com.br/c/noticias/b6/2025/11/18/071125---o-presidente-lula-pt-durante-discurso-na-plenaria-de-abertura-da-cop30-em-belem-1763484201117_v2_900x506.jpg.webp" alt="">
+                                <div class="info">
+                                    <span class="tag">Lula vota a Belém para pressionar por resultado concreto da COP30</span>
+                                    <p>O presidente Lula (PT) volta hoje a Belém para pressionar por um resultado concreto para a COP30, cúpula internacional do clima. O presidente vai se reunir com o secretário-geral da ONU, António Guterres, em um encontro que visa "fortalecer a governança climática e o multilateralismo"</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=copa" class="card">
+                                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/Selecao-Brasileira-e1763230411572.jpg?w=1200&h=900&crop=0" alt="">
+            
+                                <div class="info">
+                                    <span class="tag">Brasil na lista? Veja as seleções cabeça de chave na Copa do Mundo</span>
+                                    <p>A Seleção Brasileira será cabeça de chave na Copa do Mundo de 2026. Isso ficou definido após anúncio da Fifa nesta quinta-feira (19) e atualização dom ranking das seleções.</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=enem" class="card">
+                                    <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2025/11/Enem-2025-tera-3-questoes-anuladas-veja-quais-sao-1-1024x683.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Enem 2025 terá 3 questões anuladas; veja quais são</span>
+                                        <p>O Exame Nacional do Ensino Médio (Enem) 2025 está sendo marcado por uma polêmica envolvendo o vazamento de questões antes da aplicação da prova.Devido à situação, na tarde desta terça (18), o Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) anunciou a anulação de três questões aplicadas durante a primeira fase do exame.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="card2">
+                    <h3>EUA rejeitaram oferta de renúncia de Nicolás Maduro em negociação, diz NYT</h3>
+                    <h2>Política</h2>
+                    <h4> date: 19 de Novembro de 2025</h4>
+                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/01/2025-01-12T181627Z_1_LYNXMPEL0B08P_RTROPTP_4_VENEZUELA-CONDENA-SANCOES-e1737580654733.jpg?w=1200&h=900&crop=0" alt="">
+                    <p></p>
+                </div>
+
+
+
+                <div class="card2" onclick="openModal('modal-chicomoedas')">
+                    <h3>Saiba quem é o Chico Moedas, o ex de Luísa Sonza que pode entrar para a política</h3>
+                    <h2>Famosos</h2>
+                    <h4> date: 19 de Novembro de 2025</h4>
+                    <img src="https://www.maisnovela.com.br/wp-content/uploads/2023/12/Luisa-Sonza-e-Chico-Moedas.png" alt="">
+                    <p></p>
+                </div>
+                <!-- ===================== MODAL DA NOTICIA ===================== -->
+                <div id="modal-chicomoedas" class="modal">
+                    <div class="modal-content">
+                        <span onclick="closeModal('modal-chicomoedas')" class="close">X</span>
+                        <div class="cabecalho">
+                            <h1>Saiba quem é o Chico Moedas, o ex de Luísa Sonza que pode entrar para a política</h1>
+                            <h2>Respostas das provas de Matemática e Ciências da Natureza serão usadas apenas para fins pedagógicos; resultado final do exame será divulgado em janeiro</h2>
+                            <h3>postado em 19/11/2025 11:42</h3>
+                        </div>
+                        <img src="https://www.maisnovela.com.br/wp-content/uploads/2023/12/Luisa-Sonza-e-Chico-Moedas.png" alt="" class="img-noticia">
+                        <p class="descricao-foto">Caderno de provas do segundo dia do Enem 2025 - (crédito: Angelo Miguel/MEC)</p>
+                        <div class="conteudo">
+                            <p>O Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) divulgou, nesta quarta-feira (19/11), o <span class="destaque">gabarito oficial e os cadernos de questões do segundo dia de provas do Exame Nacional do Ensino Médio (Enem 2025)</span>. Nesta etapa, os participantes responderam às questões de Matemática e Ciências da Natureza, disciplinas que costumam apresentar maior nível de dificuldade e exigem interpretação precisa, domínio de fórmulas e habilidade de resolução rápida.</p>
+                            <p>O documento com as respostas oficiais foi publicado no portal do Inep e pode ser consultado pela página do candidato. O gabarito serve para que os estudantes comparem seus desempenhos, mas não permite o cálculo exato das notas, já que o Enem utiliza a metodologia da Teoria de Resposta ao Item (TRI), que considera parâmetros como dificuldade, coerência das respostas e padrão individual de acertos e erros.</p>
+                            <p>Em 2025, o segundo dia de aplicação ocorreu de forma tranquila, com poucas ocorrências, conforme o Inep. No país, o exame mobilizou mais de 4,8 milhões de candidatos. O Ministério da Educação (MEC) estima uma taxa de participação de cerca de 70% nos dois dias de prova, índice considerado uma média últimos anos.</p>
+                            <p>O resultado final do Enem 2025 será divulgado em janeiro de 2026, e poderá ser usado para ingresso em universidades públicas por meio do Sistema de Seleção Unificada (Sisu), para obtenção de bolsas no Programa Universidade para Todos (Prouni) e para acesso a financiamentos estudantis, como o Fies.</p>
+                        </div>
+                        <hr>
+                       <div class="saiba-mais">
+                            <h2>SAIBA MAIS</h2>
+
+                            <div class="grid">
+
+                                <a href="index.html?modal=harrypotter" class="card">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/05/novo-harry-potter-serie.png?w=1200&h=900&crop=0" alt="">
+                                    <div class="info">
+                                        <span class="tag">Daniel Radcliffe mandou carta para novo intérprete de "Harry Potter"</span>
+                                        <p>O ator Daniel Radcliffe, 36, conhecido por seu papel em "Harry Potter", contou que, com a nova produção baseada nos livros de J. K. Rowling, enviou uma carta ao novo protagonista, Dominic McLaughlin, 11, lhe desejando um ótimo período com o personagem.</p>
+                                    </div>
+                                 </a>
+
+                                <a href="index.html?modal=bolsonaro" class="card">
+                                    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/09/AGE20250911070-e1763568757637.jpg?w=1200&h=900&crop=0" alt="EduTech em Alta">
+                                    <div class="info">
+                                        <span class="tag">Batalhão da PM entra no radar para prisão de Bolsonaro</span>
+                                        <p>Batalhão da PMDF passou a ser considerado como opção para a prisão do ex-presidente Jair Bolsonaro (PL), condenado a 27 anos e três meses de reclusão no julgamento do plano de golpe. O local fica na região administrativa do Guará, a cerca de 15 quilômetros do centro de Brasília.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=strangerthings" class="card">
+                                    <img src="https://cdn.ome.lt/6oxZwfA-MY4SaKphf_PyD2xzc-I=/987x0/smart/filters:format(webp)/uploads/conteudo/fotos/stranger-things-netflix-teaser-ultima-temporada.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Stranger Things | Criadores confirmam duração do último episódio</span>
+                                        <p>Os irmãos Ross e Matt Duffer, criadores da série "Stranger Things", confirmaram a duração do último episódio da produção. Cerca de uma semana antes da primeira parte da última temporada ser lançada, eles falaram sobre o assunto em entrevista ao Collider.</p>
+                                    </div>
+                                </a>
+
+                                <a href="index.html?modal=lula" class="card">
+                                <img src="https://conteudo.imguol.com.br/c/noticias/b6/2025/11/18/071125---o-presidente-lula-pt-durante-discurso-na-plenaria-de-abertura-da-cop30-em-belem-1763484201117_v2_900x506.jpg.webp" alt="">
+                                <div class="info">
+                                    <span class="tag">Lula vota a Belém para pressionar por resultado concreto da COP30</span>
+                                    <p>O presidente Lula (PT) volta hoje a Belém para pressionar por um resultado concreto para a COP30, cúpula internacional do clima. O presidente vai se reunir com o secretário-geral da ONU, António Guterres, em um encontro que visa "fortalecer a governança climática e o multilateralismo"</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=copa" class="card">
+                                <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/Selecao-Brasileira-e1763230411572.jpg?w=1200&h=900&crop=0" alt="">
+            
+                                <div class="info">
+                                    <span class="tag">Brasil na lista? Veja as seleções cabeça de chave na Copa do Mundo</span>
+                                    <p>A Seleção Brasileira será cabeça de chave na Copa do Mundo de 2026. Isso ficou definido após anúncio da Fifa nesta quinta-feira (19) e atualização dom ranking das seleções.</p>
+                                </div>
+                                </a>
+
+                                <a href="index.html?modal=enem" class="card">
+                                    <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2025/11/Enem-2025-tera-3-questoes-anuladas-veja-quais-sao-1-1024x683.jpg" alt="">
+                                    <div class="info">
+                                        <span class="tag">Enem 2025 terá 3 questões anuladas; veja quais são</span>
+                                        <p>O Exame Nacional do Ensino Médio (Enem) 2025 está sendo marcado por uma polêmica envolvendo o vazamento de questões antes da aplicação da prova.Devido à situação, na tarde desta terça (18), o Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) anunciou a anulação de três questões aplicadas durante a primeira fase do exame.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

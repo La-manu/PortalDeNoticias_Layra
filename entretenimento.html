@@ -1,0 +1,261 @@
+<!-- Define que o documento segue o padrão HTML5 -->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Maré News</title>
+
+    <!-- Conecta o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/entretenimento.css">
+</head>
+
+<body>
+    <!-- Contêiner de todo o conteúdo superior do site -->
+    <header>
+
+        <!-- Parte superior do header (logo + menu + pesquisa) -->
+        <div class="cima">
+
+            <!-- LOGO + ÍCONE DO MENU LATERAL -->
+            <div class="logo">
+                <button id="btnMenu" aria-label="Abrir menu" style="background:none;border:none;padding:0">
+                    <!-- Use sua imagem em img/menu.png se quiser; aqui tem fallback com texto -->
+                    <img class="menu" src="img/menu.png" alt="menu" onerror="this.style.display='none';this.insertAdjacentText('afterend','☰ Menu')">
+                </button>
+
+                    <!-- NAV: a sidebar (já inserida no local correto) -->
+                    <nav id="sidebar" class="sidebar" aria-hidden="true">
+                    <!-- botão fechar com id btnFechar -->
+                    <button id="btnFechar" class="fechar" aria-label="Fechar menu">×</button>
+                    <a href="index.html">Início</a>
+                    <a href="noticia.html">Notícias</a>
+                    <a href="entretenimento.html">Entretenimento</a>
+                    <a href="contato.html">Contato</a>
+                    </nav>
+
+                    <img src="/img/logo.png" alt="" class="log">  <!-- Logo do site -->
+            </div>
+
+            <!-- ÁREA DA PESQUISA -->
+            <div class="pesquisa">
+                <div class="search-wrapper">
+
+                    <!-- Campo de busca completo -->
+                    <label class="search" aria-label="Campo de busca">
+
+                        <!-- Campo de texto onde o usuário digita -->
+                        <input type="search" placeholder="Busque" class="search-input" />
+
+                        <!-- Botão com ícone de lupa -->
+                        <button class="search-btn" aria-label="Pesquisar">
+                            🔍︎​
+                        </button>
+
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MENU PRINCIPAL DE NAVEGAÇÃO -->
+        <div class="opcoes">
+            <a href="noticia.html">Notícias</a>
+            <a href="index.html#ultimas">Ultímas</a>
+            <a href="entretenimento.html">Entretenimento</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+        
+    <img src="img/Entretenimento.png" alt="" class="entretenimento">
+
+
+    <div class="conteudo-entretenimento">
+        <!-- IMAGEM DO HORÓSCOPO (ou outra função visual) -->
+        <div class="horoscopo">
+            <img class="horoscopoletra" src="img/Horóscopo.png" alt="">
+            <div class="signos">
+                <div class="signo">
+                    <img src="img/aries.png" alt="Áries">
+                    <h2>Áries</h2>
+                    <p>Hoje é um dia para tomar iniciativas e buscar novas oportunidades. Confie em sua intuição e não tenha medo de arriscar.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/touro.png" alt="Touro">
+                    <h2>Touro</h2>
+                    <p>Concentre-se em suas finanças e evite gastos desnecessários. É um bom momento para planejar seu futuro financeiro.</p>
+                </div>
+                
+                <div class="signo">
+                    <img src="img/gemeos.png" alt="Gêmeos">
+                    <h2>Gêmeos</h2>
+                    <p>A comunicação será fundamental hoje. Expresse seus pensamentos claramente e esteja aberto a ouvir os outros.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/cancer.png" alt="Câncer">
+                    <h2>Câncer</h2>
+                    <p>Dedique tempo à sua família e amigos. Momentos de conexão emocional trarão conforto e alegria.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/leao.png" alt="Leão">
+                    <h2>Leão</h2>
+                    <p>Brilhe em suas atividades diárias. Sua confiança e carisma atrairão oportunidades positivas.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/virgem.png" alt="Virgem">
+                    <h2>Virgem</h2>
+                    <p>Organize suas tarefas e estabeleça prioridades. A eficiência será a chave para o sucesso hoje.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/libras.png" alt="Libra">
+                    <h2>Libra</h2>
+                    <p>Busque equilíbrio em suas relações. Evite conflitos e procure soluções harmoniosas.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/eswcorpiao.png" alt="Escorpião">
+                    <h2>Escorpião</h2>
+                    <p>Explore suas emoções mais profundas. A introspecção trará clareza e crescimento pessoal.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/sagitario.png" alt="Sagitário">
+                    <h2>Sagitário</h2>
+                    <p>Busque novas aventuras e expanda seus horizontes. O otimismo será seu aliado hoje.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/capricornio.png" alt="Capricórnio">
+                    <h2>Capricórnio</h2>
+                    <p>Foque em seus objetivos de longo prazo. A disciplina e a perseverança trarão recompensas.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/aquario.png" alt="Aquário">
+                    <h2>Aquário</h2>
+                    <p>Essa semana procure inovar em suas ideias e projetos. A criatividade será sua força motriz.</p>
+                </div>
+
+                <div class="signo">
+                    <img src="img/peixes.png" alt="Peixes">
+                    <h2>Peixes</h2>
+                    <p>Confie em sua intuição e siga seus sonhos. A sensibilidade será uma vantagem hoje.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="semanal">
+            <div class="musica-semana">
+                <h1 id="Music">Músicas</h1>
+                <h3>Em Alta da semana</h3>
+
+                <div id="vinyl-gallery">
+
+                    <div class="vinyl">
+                        <img
+                        src="https://m.media-amazon.com/images/I/51Eo68s0X3L._UXNaN_FMjpg_QL85_.jpg"
+                        />
+                    </div>
+                    <div class="title">Vem ser minha - Charlie Brown Jr.</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/76/a3/85/76a38569-16ac-f154-9832-29e2afcfd208/196873589800.jpg/600x600bf-60.jpg"
+                        />
+                    </div>
+                    <div class="title">Dentro da Land Hover - Luan Pereira, Felipe Amorim</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://cdn-images.dzcdn.net/images/cover/a571207e22ddac3db93830642a0bb64b/0x1900-000000-80-0-0.jpg"
+                        />
+                    </div>
+                    <div class="title">Última Noite - Léo Foguete</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b273b8ef3d521b8d2e8342562961"
+                        />
+                    </div>
+                    <div class="title">Libertários Não Morrem - Filipe Ret</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b273fbbcdc1d9d247f1ee19c524a"
+                        />
+                    </div>
+                    <div class="title"> Ama um Maloqueiro - Rafa e Junior, Hugo e Guilherme</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDQ3NKGWuO1oKFpKc2o5HOguiL5XU3PdKtFw&s"
+                        />
+                    </div>
+                    <div class="title">Saveiro - Kaique e Felipe, Luan Pereira Saveiro</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b273df631d6d1d7e83b276a68d12"
+                        />
+                    </div>
+                    <div class="title">Bruno & Barretto, CountryBeat – Gerente da Sicredi</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b2734dee64ae7ed8d46b9406a3c5"
+                        />
+                    </div>
+                    <div class="title">VEIGH - Talvez Você Precise de Mim</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b273ea0bcda85e8b46c66982a3ed"
+                        />
+                    </div>
+                    <div class="title">NA IMAGINAÇÃO - Eric Land, Mc Livinho, DJ TOPO </div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i.scdn.co/image/ab67616d0000b273e9128c3311a541034c4b9bb1"
+                        />
+                    </div>
+                    <div class="title">Flamingos - Baco Exu do Blues ft. Tuyo</div>
+
+                    <div class="vinyl">
+                        <img
+                        src="https://i1.sndcdn.com/artworks-J5kb4ImSQelKPZv4-ksW7Rg-t500x500.jpg"
+                        />
+                    </div>
+                    <div class="title">Latino Americano - Drinho Sp</div>
+                </div>
+            </div>
+
+            <div class="series-semana">
+                <h1 id="Series">Séries e Filmes</h1>
+                <h3>Em Alta da semana</h3>
+                <div class="series-semana-conteudo">
+                    <div class="series">
+                        <h2>Stranger Things</h2>
+                        <img src="https://thrillernord.it/wp-content/uploads/2022/06/BD218D46-35CD-4848-B548-13A5C53AE8C9-e1655985604321.jpeg" alt="">
+                        <p>Acompanha um grupo de amigos em uma pequena cidade dos anos 80 que enfrenta eventos sobrenaturais após o desaparecimento de um garoto. Quando uma garota com poderes telecinéticos aparece, eles descobrem a existência do Mundo Invertido e de criaturas perigosas.</p>
+                    </div>
+                    <div class="filmes">
+                        <h2>Frankenstein</h2>
+                        <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2025/08/frankenstein_guillermo_del_toro_netflix_data_estreia__yv2120to0.jpg" alt="">
+                        <p>Frankenstein conta a história de Victor Frankenstein, um cientista que cria uma criatura viva a partir de partes de cadáveres. Assustado, ele a abandona, e o monstro — rejeitado por todos — passa a buscar vingança contra seu criador, levando a uma tragédia para ambos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

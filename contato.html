@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Deixa o site responsivo para celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prisma Notícia</title>
+
+    <!-- Arquivo CSS principal da página -->
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+
+    <!-- ======================= CABEÇALHO ======================= -->
+    <header>
+
+        <!-- Parte de cima: menu, logo e barra de pesquisa -->
+        <div class="cima">
+
+            <!-- Área contendo o menu e o logo -->
+            <div class="logo">
+                      <button id="btnMenu" aria-label="Abrir menu" style="background:none;border:none;padding:0">
+                    <!-- Use sua imagem em img/menu.png se quiser; aqui tem fallback com texto -->
+                    <img class="menu" src="img/menu.png" alt="menu" onerror="this.style.display='none';this.insertAdjacentText('afterend','☰ Menu')">
+                </button>
+
+                    <!-- NAV: a sidebar (já inserida no local correto) -->
+                    <nav id="sidebar" class="sidebar" aria-hidden="true">
+                    <!-- botão fechar com id btnFechar -->
+                    <button id="btnFechar" class="fechar" aria-label="Fechar menu">×</button>
+                    <a href="index.html">Início</a>
+                    <a href="noticia.html">Notícias</a>
+                    <a href="entretenimento.html">Entretenimento</a>
+                    <a href="contato.html">Contato</a>
+                    </nav>
+                <img src="/img/logo.png" alt="" class="log">  <!-- Logo principal -->
+            </div>
+
+            <!-- Campo de busca -->
+            <div class="pesquisa">
+                <div class="search-wrapper">
+
+                    <!-- Label envolve input + botão -->
+                    <label class="search" aria-label="Campo de busca">
+
+                        <!-- Campo de texto onde o usuário digita -->
+                        <input type="search" placeholder="Busque" class="search-input" />
+
+                        <!-- Botão com ícone de lupa -->
+                        <button class="search-btn" aria-label="Pesquisar">
+                            🔍︎​
+                        </button>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu principal do site -->
+        <div class="opcoes">
+            <a href="noticia.html">Notícias</a>
+            <a href="index.html#ultimas">Ultímas</a>
+            <a href="entretenimento.html">Entretenimento</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- ======================= FORMULÁRIO DE CONTATO ======================= -->
+
+    <!-- Título da página/contacto -->
+    <h2>Entre em Contato com</h2>
+    <div class="imagem">
+        <img src="img/Escrita.png" alt="">
+    </div>
+        <!-- Formulário simples de envio -->
+    <form id="contactForm" action="/submit" method="post" enctype="multipart/form-data" novalidate>
+    <fieldset>
+        <legend>Fale conosco</legend>
+
+        <!-- Nome -->
+        <label for="nome">Nome completo</label><br>
+        <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Seu nome completo"
+        required
+        minlength="2"
+        aria-required="true"
+        >
+        <small id="nomeHelp" class="hint">Obrigatório.</small>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">E-mail</label><br>
+        <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="seu@exemplo.com"
+        required
+        aria-required="true"
+        >
+        <small class="hint">Digite um e-mail válido.</small>
+        <br><br>
+
+        <!-- Telefone -->
+        <label for="telefone">Telefone</label><br>
+        <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        placeholder="+55 (11) 91234-5678"
+        required
+        pattern="^\+?\d{0,3}\s?\(?\d{2,3}\)?\s?\d{4,5}-?\d{4}$"
+        aria-describedby="telHelp"
+        >
+        <small id="telHelp" class="hint">Formato esperado: +55 (11) 91234-5678 ou (11) 91234-5678.</small>
+        <br><br>
+
+        <!-- Assunto (select) -->
+        <label for="assunto">Assunto</label><br>
+        <select id="assunto" name="assunto" required>
+        <option value="" disabled selected>-- selecione --</option>
+        <option value="informacao">Informação</option>
+        <option value="suporte">Suporte técnico</option>
+        <option value="comercial">Comercial</option>
+        <option value="parcerias">Parcerias</option>
+        </select>
+        <br><br>
+
+        <!-- Tipo de contato (radio) -->
+        <fieldset>
+        <legend>Tipo de contato</legend>
+        <label>
+            <input type="radio" name="tipo_contato" value="email" required>
+            E-mail
+        </label>
+        <label>
+            <input type="radio" name="tipo_contato" value="telefone">
+            Telefone
+        </label>
+        <label>
+            <input type="radio" name="tipo_contato" value="whatsapp">
+            WhatsApp
+        </label>
+        </fieldset>
+        <br>
+
+        <!-- Mensagem (textarea) -->
+        <label for="mensagem">Mensagem</label><br>
+        <textarea id="mensagem" name="mensagem" rows="6" required minlength="10"
+        placeholder="Escreva sua mensagem..."></textarea>
+        <br><br>
+
+        <!-- Anexo (file) -->
+        <label for="anexo">Anexo (opcional)</label><br>
+        <input
+        type="file"
+        id="anexo"
+        name="anexo"
+        accept=".pdf,.doc,.docx,image/*"
+        aria-describedby="anexoHelp"
+        >
+        <small id="anexoHelp" class="hint">PDF, DOC, DOCX ou imagens. Máx. 5 MB.</small>
+        <br><br>
+
+        <!-- Aceite de termos (checkbox) -->
+        <label>
+        <input type="checkbox" id="aceite" name="aceite" required aria-required="true">
+        Li e aceito os <a href="/termos" target="_blank">termos de uso</a>.
+        </label>
+        <br><br>
+
+        <!-- Botão -->
+        <button type="submit">Enviar</button>
+
+        <!-- Área para mensagens de erro custom -->
+        <div id="formMessages" role="alert" aria-live="polite" style="margin-top: .5rem;"></div>
+    </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+    <script src="forms.js"></script>
+</body>
+</html>
