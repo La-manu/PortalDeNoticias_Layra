@@ -153,7 +153,7 @@ a:hover::after {
 }
 
 form {
-max-width: 600px;
+max-width: 900px;
 margin: auto;
 background: #fff;
 padding: 25px;
@@ -428,10 +428,10 @@ h2 {
 
 :root{
     --bg: #ffffff;
-    --card: #fbfbfd;
-    --muted: #6b7280;
+    --card: #4c4c94;
+    --muted: #43506a;
     --accent: #0066cc;
-    --border: #e6e9ee;
+    --border: #acb6c8;
     --shadow: 0 6px 20px rgba(18,23,38,0.06);
     --radius: 12px;
     --max-width: 980px;
@@ -450,8 +450,8 @@ h2 {
 
   .horario-atendimento h2{
     margin: 0 0 12px 0;
-    font-size: 1.25rem;
-    color: #0f1724;
+    font-size: 1.75rem;
+    color: #334e78;
   }
 
   .horario-wrapper{
@@ -486,13 +486,21 @@ h2 {
   }
 
   .horario-table tbody tr:nth-child(even){
-    background: #fbfcff;
+    background: #e5e8f1;
   }
 
   .horario-table tbody th{
     font-weight: 600;
     width: 160px;
+  background-color: #cbdbeb;
   }
+
+  .horario-table thead th{
+    font-weight: 600;
+
+    background-color: #cbdbeb;
+  }
+
 
   .horario-table tbody td{
     white-space: nowrap;
